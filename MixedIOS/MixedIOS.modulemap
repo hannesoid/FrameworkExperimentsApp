@@ -1,0 +1,14 @@
+//
+//  MixedIOS.modulemap
+//  FrameworkExperimentsApp
+//
+//  Created by Hannes Oud on 31.05.19.
+//  Copyright © 2019 IdeasOnCanvas GmbH. All rights reserved.
+//
+
+framework module MixedIOS {
+
+    explicit module ObjC {
+        header "ObjCObject.h"
+    }
+}
