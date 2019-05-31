@@ -18,6 +18,8 @@
 		D12599B322A16469005D1A6A /* ObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D125999A22A163A7005D1A6A /* ObjCObject.m */; };
 		D12599B422A16469005D1A6A /* SwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D125999422A16326005D1A6A /* SwiftObject.swift */; };
 		D12599B822A16542005D1A6A /* ObjCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D125999922A163A7005D1A6A /* ObjCObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D12599BE22A1680A005D1A6A /* ObjCConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = D12599BD22A1680A005D1A6A /* ObjCConsumer.m */; };
+		D12599C022A1704F005D1A6A /* SwiftConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12599BF22A1704F005D1A6A /* SwiftConsumer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		D12599A822A16459005D1A6A /* MixedIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixedIOS.h; sourceTree = "<group>"; };
 		D12599A922A16459005D1A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D12599B722A164B6005D1A6A /* MixedIOS.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = MixedIOS.modulemap; sourceTree = "<group>"; };
+		D12599BB22A1680A005D1A6A /* FrameworkExperimentsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameworkExperimentsApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		D12599BC22A1680A005D1A6A /* ObjCConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCConsumer.h; sourceTree = "<group>"; };
+		D12599BD22A1680A005D1A6A /* ObjCConsumer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCConsumer.m; sourceTree = "<group>"; };
+		D12599BF22A1704F005D1A6A /* SwiftConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConsumer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,13 @@
 				D125997522A162B7005D1A6A /* AppDelegate.swift */,
 				D125997722A162B7005D1A6A /* ViewController.swift */,
 				D125997922A162B7005D1A6A /* Main.storyboard */,
+				D12599BF22A1704F005D1A6A /* SwiftConsumer.swift */,
+				D12599BC22A1680A005D1A6A /* ObjCConsumer.h */,
+				D12599BD22A1680A005D1A6A /* ObjCConsumer.m */,
 				D125997C22A162B8005D1A6A /* Assets.xcassets */,
 				D125997E22A162B8005D1A6A /* LaunchScreen.storyboard */,
 				D125998122A162B8005D1A6A /* Info.plist */,
+				D12599BB22A1680A005D1A6A /* FrameworkExperimentsApp-Bridging-Header.h */,
 			);
 			path = FrameworkExperimentsApp;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 				TargetAttributes = {
 					D125997122A162B7005D1A6A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					D12599A522A16459005D1A6A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -248,6 +259,8 @@
 			files = (
 				D125997822A162B7005D1A6A /* ViewController.swift in Sources */,
 				D125997622A162B7005D1A6A /* AppDelegate.swift in Sources */,
+				D12599BE22A1680A005D1A6A /* ObjCConsumer.m in Sources */,
+				D12599C022A1704F005D1A6A /* SwiftConsumer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +424,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6L39UYL6Z;
 				INFOPLIST_FILE = FrameworkExperimentsApp/Info.plist;
@@ -420,6 +434,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ideasoncanvas.FrameworkExperimentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameworkExperimentsApp/FrameworkExperimentsApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,6 +446,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6L39UYL6Z;
 				INFOPLIST_FILE = FrameworkExperimentsApp/Info.plist;
@@ -439,6 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ideasoncanvas.FrameworkExperimentsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameworkExperimentsApp/FrameworkExperimentsApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
