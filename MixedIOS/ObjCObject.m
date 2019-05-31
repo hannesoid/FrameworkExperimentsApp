@@ -7,8 +7,10 @@
 //
 
 #import "ObjCObject.h"
-#import <MixedIOS/MixedIOS-Swift.h>
 
 @implementation ObjCObject
 
+- (void)printHelloViaSwift {
+    [SwiftObject printHello];
+}
 @end

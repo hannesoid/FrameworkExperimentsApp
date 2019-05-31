@@ -12,7 +12,13 @@ import MixedIOS.ObjC
 @objc
 public final class SwiftObject: NSObject {
 
-    //var objCObject: ObjCObject?ç
+    @objc var objCObject: ObjCObject?
+    @objc var objcEnum: ObjCEnum = .value1
+    @objc var objCStruct: ObjCStruct = .init(value: 3)
 
     public override init() { }
+
+    @objc public static func printHello() {
+        print("hello")
+    }
 }
