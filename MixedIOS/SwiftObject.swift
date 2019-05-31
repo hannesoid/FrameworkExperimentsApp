@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MixedIOS.ObjC
 
 @objc
 public final class SwiftObject: NSObject {

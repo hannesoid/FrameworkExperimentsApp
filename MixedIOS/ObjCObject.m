@@ -7,6 +7,7 @@
 //
 
 #import "ObjCObject.h"
+#import <MixedIOS/MixedIOS-Swift.h>
 
 @implementation ObjCObject
 
