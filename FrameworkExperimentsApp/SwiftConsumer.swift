@@ -8,7 +8,6 @@
 
 import Foundation
 import MixedIOS
-//import MixedIOS.ObjC // explicit import not needed
 
 func testAccess() {
 

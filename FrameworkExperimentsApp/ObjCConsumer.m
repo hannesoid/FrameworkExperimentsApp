@@ -11,15 +11,11 @@
 
 @implementation ObjCConsumer
 
-// MARK: Doesn't Work
+// MARK: Works after changes in 6f5c8e8c (WWDC intervention)
 
-//- (ObjCEnum)swiftObject_publicObjCEnumValue {
-//    return [[SwiftObject alloc] init].publicObjCEnum;
-//}
-//
-//- (ObjCObject *)swiftObject_internalObjCObject {
-//    return [[SwiftObject alloc] init].internalObjCObject;
-//}
+- (ObjCEnum)swiftObject_publicObjCEnumValue {
+    return [[SwiftObject alloc] init].publicObjCEnum;
+}
 
 // MARK: Works
 

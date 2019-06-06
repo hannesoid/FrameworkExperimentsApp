@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 @import MixedIOS;
-@import MixedIOS.ObjC; // Explicit Import needed
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ObjCConsumer : NSObject
 
-// MARK: Doesn't work
+// MARK: Works after changes in 6f5c8e8c (WWDC intervention)
 
 @property (nonatomic, readonly) ObjCEnum swiftObject_publicObjCEnumValue;
 @property (nonatomic, readonly) ObjCObject * swiftObject_internalObjCObject;
