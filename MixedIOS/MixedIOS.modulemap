@@ -9,9 +9,12 @@
 framework module MixedIOS {
     // Have to define the umbrella header
     umbrella header "MixedIOS.h"
-    // explicit module is a compiler bug -> file radar for this
-    // as work around it works without explicit specifier
+
+    // You can declare a submodule, but it may not be `explicit module`.
+    // You can also do without submodule
     module ObjC {
+        // Need to include the header here or #include it in `MixedIOS.h`
+        // For this you would need to mark this header as `Private` in target membership.
         header "ObjCObject.h"
     }
 }
