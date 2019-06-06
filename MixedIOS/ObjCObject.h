@@ -20,20 +20,24 @@ typedef struct {
     NSInteger value;
 } ObjCStruct;
 
+/// Forward declare swift enum
+typedef NS_ENUM(NSInteger, SwiftEnum);
+
+/// Forward declare swift class
 @class SwiftObject;
 
 @interface ObjCObject : NSObject
 
-// MARK: Doesn't work
+// MARK: Works after forward declaring `SwiftEnum` and `SwiftObject` as above
 
-//@property (readonly) SwiftEnum swiftEnum; // Can we use `SwiftEnum` here somehow?
-//@property (nonatomic) SwiftEnum swiftObject_publicSwiftEnumValue;
-//@property (readonly) ObjCEnum swiftObject_internalObjCEnumValue; // Can we access properties of Swift Object here somehow?
-//@property (readonly) ObjCEnum swiftObject_publicObjCEnumValue; // Can we access properties of Swift Object here somehow?
-//@property (nonatomic, nullable) ObjCObject *swiftObject_internalObjCObject;
+@property (readonly) SwiftEnum swiftEnum;
+@property (nonatomic) SwiftEnum swiftObject_publicSwiftEnumValue;
+@property (readonly) ObjCEnum swiftObject_internalObjCEnumValue;
+@property (readonly) ObjCEnum swiftObject_publicObjCEnumValue;
+@property (nonatomic, nullable) ObjCObject *swiftObject_internalObjCObject;
 
 
-// MARK: Works
+// MARK: Works "automatically"
 
 @property (nonatomic) ObjCEnum objCEnum;
 @property (nonatomic) ObjCStruct objCStruct;

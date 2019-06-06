@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import MixedIOS.ObjC
 
 @objc public enum SwiftEnum: Int {
     case value1
@@ -17,12 +16,12 @@ import MixedIOS.ObjC
 @objc
 public final class SwiftObject: NSObject {
 
-    // MARK: Doesn't work
+    // MARK: Works, when `MixedIOS.modulemap` is configured with umbrella header and non-explicit modules
 
-//    @objc public var publicObjCEnum: ObjCEnum = .value1   // only `internal` scope works
-//    @objc public var publicObjCStruct: ObjCStruct = .init(value: 3)   // only `internal` scope works
+    @objc public var publicObjCEnum: ObjCEnum = .value1
+    @objc public var publicObjCStruct: ObjCStruct = .init(value: 3)
 
-    // MARK: Works
+    // MARK: Works "Automatically"
 
     @objc public var publicObjCObject: ObjCObject? = ObjCObject()
     @objc public var publicSwiftEnum: SwiftEnum = .value1

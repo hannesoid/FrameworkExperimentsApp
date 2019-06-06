@@ -7,8 +7,11 @@
 //
 
 framework module MixedIOS {
-
-    explicit module ObjC {
+    // Have to define the umbrella header
+    umbrella header "MixedIOS.h"
+    // explicit module is a compiler bug -> file radar for this
+    // as work around it works without explicit specifier
+    module ObjC {
         header "ObjCObject.h"
     }
 }
