@@ -27,3 +27,6 @@ This will enable using ObjC from Swift within the framework
 
 ### Redefine your Swift `@objc` elements in ObjC.
  Yup - necessary, if you want to use them from ObjC within the framework.
+ 
+ ## Related
+-  https://jsorge.net/2019/01/23/mixed-language-framework
